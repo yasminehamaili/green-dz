@@ -1,0 +1,101 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-dark-green: var(--dark-green);
+  --color-forest-green: var(--forest-green);
+  --color-sage: var(--sage);
+  --color-near-black: var(--near-black);
+  --color-grey: var(--grey);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+
+  --font-display: "Tajawal", "Noto Sans Arabic", sans-serif;
+  --font-sans: "Noto Sans Arabic", "Tajawal", sans-serif;
+}
+
+:root {
+  --radius: 1.25rem;
+  --dark-green: #014734;
+  --forest-green: #0c6b4f;
+  --sage: #d6e2be;
+  --near-black: #202020;
+  --grey: #efefef;
+  --paper: #fdfdfd;
+  --ink: #1c1c1c;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --primary: var(--dark-green);
+  --primary-foreground: var(--sage);
+  --secondary: var(--grey);
+  --secondary-foreground: var(--ink);
+  --muted: var(--grey);
+  --muted-foreground: #555;
+  --accent: var(--sage);
+  --accent-foreground: var(--dark-green);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: var(--forest-green);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-forest-green);
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  border-radius: 24px;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+}
