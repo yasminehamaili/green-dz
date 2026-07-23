@@ -1,6 +1,6 @@
 # GreenDZ
 
-🔗 [Try it here](https://your-netlify-url.netlify.app)
+🔗 [Try it here](https://green-dz-app.netlify.app/)
 
 GreenDZ is an Arabic (RTL) recycling web app for Algeria. It helps people find and add recycling points on an interactive map, learn how to sort waste, and discover local environmental events.
 
