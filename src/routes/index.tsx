@@ -55,7 +55,7 @@ function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-2">
           <a href="#about" className="rounded-full bg-near-black px-5 py-2.5 text-sm font-semibold text-sage hover:bg-black transition">من نحن</a>
-          <a href="#map" className="rounded-full bg-dark-green px-5 py-2.5 text-sm font-semibold text-sage hover:bg-forest-green transition">استكشف الخريطة</a>
+      
         </div>
         <button aria-label="القائمة" onClick={() => setOpen((v) => !v)} className="md:hidden grid h-10 w-10 place-items-center rounded-full bg-grey">
           <span className="text-xl">☰</span>
